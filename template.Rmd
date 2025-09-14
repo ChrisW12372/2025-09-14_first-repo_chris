@@ -3,13 +3,13 @@ title: "Basic Plot"
 author: "Chris"
 date: "2025-09-14"
 output: 
-  html_document
+  html_document:
     toc: true
     toc_float: true
     theme: united
 ---
 
-I'm an R Markdown document! '
+<span style = "color: red">**This is an R Markdown document!**</span>
 
 ```{r include = FALSE}
 library(tibble)
@@ -17,17 +17,58 @@ library(ggplot2)
 ```
 
 
-# Section 1
 
-Here's a **code chunk** that samples from 
-a _normal distribution_:
 
-```{r}
-samp = rnorm(100)
-length(samp)
+```{r df_creat}
+set.seed(123)
+
+df_demonstration =
+  tibble(
+    x = rnorm(n = 1000, mean = 9, sd = 5),
+    y = 3 * x + 12 + runif(n = 1000, min = 2, max = 10)
+  )
 ```
 
-# Section 2
 
-I can take the mean of the sample, too!
-The mean is `r mean(samp)`.
+
+
+```{r making_a_plot}
+ggplot(df_demonstration, aes(x = x, y = y)) + geom_point()
+```
+
+The mean is `r mean(df_demonstration$x)`.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
