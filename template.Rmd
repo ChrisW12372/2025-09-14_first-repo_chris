@@ -9,7 +9,13 @@ output:
     theme: united
 ---
 
-I'm an R Markdown document! 
+I'm an R Markdown document! '
+
+```{r include = FALSE}
+library(tibble)
+library(ggplot2)
+```
+
 
 # Section 1
 
