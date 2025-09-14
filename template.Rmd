@@ -3,7 +3,7 @@ title: "Basic Plot"
 author: "Chris"
 date: "2025-09-14"
 output: 
-  html_document:
+  github_document:
     toc: true
     toc_float: true
     theme: united
